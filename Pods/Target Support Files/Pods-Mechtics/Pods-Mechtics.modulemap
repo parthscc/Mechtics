@@ -1,0 +1,6 @@
+framework module Pods_Mechtics {
+  umbrella header "Pods-Mechtics-umbrella.h"
+
+  export *
+  module * { export * }
+}

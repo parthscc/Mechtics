@@ -1,0 +1,16 @@
+PODS:
+  - SlideMenuControllerSwift (4.0.0)
+
+DEPENDENCIES:
+  - SlideMenuControllerSwift
+
+SPEC REPOS:
+  trunk:
+    - SlideMenuControllerSwift
+
+SPEC CHECKSUMS:
+  SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
+
+PODFILE CHECKSUM: a190c3d58dcdad0fe59c575890723015aad28899
+
+COCOAPODS: 1.11.2

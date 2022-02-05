@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DBF3F428471E93C1F6DD032 /* Pods_Mechtics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542E7DA001327099DD206131 /* Pods_Mechtics.framework */; };
 		B28736E227AE90C000B87BEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736E127AE90C000B87BEA /* AppDelegate.swift */; };
-		B28736E427AE90C000B87BEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736E327AE90C000B87BEA /* SceneDelegate.swift */; };
-		B28736E627AE90C000B87BEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736E527AE90C000B87BEA /* ViewController.swift */; };
+		B28736E627AE90C000B87BEA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736E527AE90C000B87BEA /* HomeVC.swift */; };
 		B28736E927AE90C000B87BEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28736E727AE90C000B87BEA /* Main.storyboard */; };
 		B28736EC27AE90C000B87BEA /* Mechtics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B28736EA27AE90C000B87BEA /* Mechtics.xcdatamodeld */; };
 		B28736EE27AE90C200B87BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B28736ED27AE90C200B87BEA /* Assets.xcassets */; };
 		B28736F127AE90C200B87BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28736EF27AE90C200B87BEA /* LaunchScreen.storyboard */; };
+		B28736FE27AE951A00B87BEA /* SidemenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736FD27AE951A00B87BEA /* SidemenuVC.swift */; };
+		B287370027AE975F00B87BEA /* SlideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736FF27AE975F00B87BEA /* SlideMenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		542E7DA001327099DD206131 /* Pods_Mechtics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mechtics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76A6C597D34DAC400BFCB2CC /* Pods-Mechtics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mechtics.debug.xcconfig"; path = "Target Support Files/Pods-Mechtics/Pods-Mechtics.debug.xcconfig"; sourceTree = "<group>"; };
 		B28736DE27AE90C000B87BEA /* Mechtics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mechtics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28736E127AE90C000B87BEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B28736E327AE90C000B87BEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B28736E527AE90C000B87BEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B28736E527AE90C000B87BEA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B28736E827AE90C000B87BEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B28736EB27AE90C000B87BEA /* Mechtics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mechtics.xcdatamodel; sourceTree = "<group>"; };
 		B28736ED27AE90C200B87BEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B28736F027AE90C200B87BEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B28736F227AE90C200B87BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B28736FD27AE951A00B87BEA /* SidemenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidemenuVC.swift; sourceTree = "<group>"; };
+		B28736FF27AE975F00B87BEA /* SlideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuCell.swift; sourceTree = "<group>"; };
+		D2FECA16F275C06BB12E94DB /* Pods-Mechtics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mechtics.release.xcconfig"; path = "Target Support Files/Pods-Mechtics/Pods-Mechtics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DBF3F428471E93C1F6DD032 /* Pods_Mechtics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				B28736E027AE90C000B87BEA /* Mechtics */,
 				B28736DF27AE90C000B87BEA /* Products */,
+				F2331BB33EAB0C3E7C67CC28 /* Pods */,
+				FECBF0371AD32501F2BA1FD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,9 +67,10 @@
 		B28736E027AE90C000B87BEA /* Mechtics */ = {
 			isa = PBXGroup;
 			children = (
+				B28736FA27AE94ED00B87BEA /* SideMenu */,
+				B28736F927AE920600B87BEA /* View */,
+				B28736F827AE91EE00B87BEA /* Controller */,
 				B28736E127AE90C000B87BEA /* AppDelegate.swift */,
-				B28736E327AE90C000B87BEA /* SceneDelegate.swift */,
-				B28736E527AE90C000B87BEA /* ViewController.swift */,
 				B28736E727AE90C000B87BEA /* Main.storyboard */,
 				B28736ED27AE90C200B87BEA /* Assets.xcassets */,
 				B28736EF27AE90C200B87BEA /* LaunchScreen.storyboard */,
@@ -70,6 +80,48 @@
 			path = Mechtics;
 			sourceTree = "<group>";
 		};
+		B28736F827AE91EE00B87BEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B28736E527AE90C000B87BEA /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B28736F927AE920600B87BEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B28736FF27AE975F00B87BEA /* SlideMenuCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B28736FA27AE94ED00B87BEA /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B28736FD27AE951A00B87BEA /* SidemenuVC.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		F2331BB33EAB0C3E7C67CC28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76A6C597D34DAC400BFCB2CC /* Pods-Mechtics.debug.xcconfig */,
+				D2FECA16F275C06BB12E94DB /* Pods-Mechtics.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FECBF0371AD32501F2BA1FD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				542E7DA001327099DD206131 /* Pods_Mechtics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B28736F527AE90C200B87BEA /* Build configuration list for PBXNativeTarget "Mechtics" */;
 			buildPhases = (
+				4798C88FE012BCE34735832D /* [CP] Check Pods Manifest.lock */,
 				B28736DA27AE90C000B87BEA /* Sources */,
 				B28736DB27AE90C000B87BEA /* Frameworks */,
 				B28736DC27AE90C000B87BEA /* Resources */,
+				06EA09A1B04D346503F9A816 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,15 +190,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06EA09A1B04D346503F9A816 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mechtics/Pods-Mechtics-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mechtics/Pods-Mechtics-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mechtics/Pods-Mechtics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4798C88FE012BCE34735832D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mechtics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B28736DA27AE90C000B87BEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B28736E627AE90C000B87BEA /* ViewController.swift in Sources */,
+				B287370027AE975F00B87BEA /* SlideMenuCell.swift in Sources */,
+				B28736E627AE90C000B87BEA /* HomeVC.swift in Sources */,
 				B28736EC27AE90C000B87BEA /* Mechtics.xcdatamodeld in Sources */,
+				B28736FE27AE951A00B87BEA /* SidemenuVC.swift in Sources */,
 				B28736E227AE90C000B87BEA /* AppDelegate.swift in Sources */,
-				B28736E427AE90C000B87BEA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +385,7 @@
 		};
 		B28736F627AE90C200B87BEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76A6C597D34DAC400BFCB2CC /* Pods-Mechtics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -316,6 +414,7 @@
 		};
 		B28736F727AE90C200B87BEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2FECA16F275C06BB12E94DB /* Pods-Mechtics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
