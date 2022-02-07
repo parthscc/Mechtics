@@ -16,6 +16,14 @@
 		B28736F127AE90C200B87BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28736EF27AE90C200B87BEA /* LaunchScreen.storyboard */; };
 		B28736FE27AE951A00B87BEA /* SidemenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736FD27AE951A00B87BEA /* SidemenuVC.swift */; };
 		B287370027AE975F00B87BEA /* SlideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736FF27AE975F00B87BEA /* SlideMenuCell.swift */; };
+		B2F03F5A27B0CDC600B2B040 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F03F5927B0CDC600B2B040 /* Data.swift */; };
+		B2F03F5C27B0DE5D00B2B040 /* BlogsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F03F5B27B0DE5D00B2B040 /* BlogsTVC.swift */; };
+		B2F03F5E27B0DF7400B2B040 /* BlogsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F03F5D27B0DF7400B2B040 /* BlogsCell.swift */; };
+		B2F03F6027B0EB9D00B2B040 /* webVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F03F5F27B0EB9D00B2B040 /* webVC.swift */; };
+		B2F03F6327B0F4A400B2B040 /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F03F6227B0F4A400B2B040 /* AddNoteVC.swift */; };
+		B2F03F6527B0F64C00B2B040 /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F03F6427B0F64C00B2B040 /* NotesVC.swift */; };
+		B2F03F6727B0F6E200B2B040 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F03F6627B0F6E200B2B040 /* NotesCell.swift */; };
+		B2F03F6927B0FE1200B2B040 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F03F6827B0FE1200B2B040 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +39,14 @@
 		B28736F227AE90C200B87BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B28736FD27AE951A00B87BEA /* SidemenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidemenuVC.swift; sourceTree = "<group>"; };
 		B28736FF27AE975F00B87BEA /* SlideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuCell.swift; sourceTree = "<group>"; };
+		B2F03F5927B0CDC600B2B040 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		B2F03F5B27B0DE5D00B2B040 /* BlogsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogsTVC.swift; sourceTree = "<group>"; };
+		B2F03F5D27B0DF7400B2B040 /* BlogsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogsCell.swift; sourceTree = "<group>"; };
+		B2F03F5F27B0EB9D00B2B040 /* webVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webVC.swift; sourceTree = "<group>"; };
+		B2F03F6227B0F4A400B2B040 /* AddNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
+		B2F03F6427B0F64C00B2B040 /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
+		B2F03F6627B0F6E200B2B040 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		B2F03F6827B0FE1200B2B040 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2FECA16F275C06BB12E94DB /* Pods-Mechtics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mechtics.release.xcconfig"; path = "Target Support Files/Pods-Mechtics/Pods-Mechtics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +83,7 @@
 		B28736E027AE90C000B87BEA /* Mechtics */ = {
 			isa = PBXGroup;
 			children = (
+				B2F03F6A27B0FE1800B2B040 /* Extension */,
 				B28736FA27AE94ED00B87BEA /* SideMenu */,
 				B28736F927AE920600B87BEA /* View */,
 				B28736F827AE91EE00B87BEA /* Controller */,
@@ -76,6 +93,7 @@
 				B28736EF27AE90C200B87BEA /* LaunchScreen.storyboard */,
 				B28736F227AE90C200B87BEA /* Info.plist */,
 				B28736EA27AE90C000B87BEA /* Mechtics.xcdatamodeld */,
+				B2F03F5927B0CDC600B2B040 /* Data.swift */,
 			);
 			path = Mechtics;
 			sourceTree = "<group>";
@@ -83,7 +101,10 @@
 		B28736F827AE91EE00B87BEA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B2F03F6127B0F48E00B2B040 /* Note */,
 				B28736E527AE90C000B87BEA /* HomeVC.swift */,
+				B2F03F5B27B0DE5D00B2B040 /* BlogsTVC.swift */,
+				B2F03F5F27B0EB9D00B2B040 /* webVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				B28736FF27AE975F00B87BEA /* SlideMenuCell.swift */,
+				B2F03F5D27B0DF7400B2B040 /* BlogsCell.swift */,
+				B2F03F6627B0F6E200B2B040 /* NotesCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,13 +127,29 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		B2F03F6127B0F48E00B2B040 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				B2F03F6227B0F4A400B2B040 /* AddNoteVC.swift */,
+				B2F03F6427B0F64C00B2B040 /* NotesVC.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		B2F03F6A27B0FE1800B2B040 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B2F03F6827B0FE1200B2B040 /* Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		F2331BB33EAB0C3E7C67CC28 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				76A6C597D34DAC400BFCB2CC /* Pods-Mechtics.debug.xcconfig */,
 				D2FECA16F275C06BB12E94DB /* Pods-Mechtics.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -238,9 +277,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B287370027AE975F00B87BEA /* SlideMenuCell.swift in Sources */,
+				B2F03F6527B0F64C00B2B040 /* NotesVC.swift in Sources */,
+				B2F03F5E27B0DF7400B2B040 /* BlogsCell.swift in Sources */,
+				B2F03F6727B0F6E200B2B040 /* NotesCell.swift in Sources */,
+				B2F03F6327B0F4A400B2B040 /* AddNoteVC.swift in Sources */,
+				B2F03F5A27B0CDC600B2B040 /* Data.swift in Sources */,
 				B28736E627AE90C000B87BEA /* HomeVC.swift in Sources */,
+				B2F03F5C27B0DE5D00B2B040 /* BlogsTVC.swift in Sources */,
+				B2F03F6927B0FE1200B2B040 /* Extensions.swift in Sources */,
 				B28736EC27AE90C000B87BEA /* Mechtics.xcdatamodeld in Sources */,
 				B28736FE27AE951A00B87BEA /* SidemenuVC.swift in Sources */,
+				B2F03F6027B0EB9D00B2B040 /* webVC.swift in Sources */,
 				B28736E227AE90C000B87BEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +446,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,6 +476,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

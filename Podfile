@@ -5,6 +5,9 @@ target 'Mechtics' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 pod 'SlideMenuControllerSwift'
+pod 'MBProgressHUD'
+pod 'IQKeyboardManagerSwift'
+pod 'SwiftMessages'
   # Pods for Mechtics
 
 end
