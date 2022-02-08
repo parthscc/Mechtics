@@ -54,16 +54,28 @@ class SidemenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
             self.slideMenuController()?.changeMainViewController(self.vc, close: true)
         }
         if indexPath.row == 3{
-            slideMenuController()?.closeLeft()
-            UIApplication.shared.open(URL(string: "https://mechtics.com/general/jobs/")! as URL, options: [:], completionHandler: nil)
+            let vc = storyboard!.instantiateViewController(withIdentifier: "webVC") as! webVC
+            vc.navigationItem.title = "Jobs"
+            vc.url = "https://mechtics.com/general/jobs/"
+            vc.slide = true
+            self.vc = UINavigationController(rootViewController: vc)
+            self.slideMenuController()?.changeMainViewController(self.vc, close: true)
         }
         if indexPath.row == 4{
-            slideMenuController()?.closeLeft()
-            UIApplication.shared.open(URL(string: "https://mechtics.com/general/exams/")! as URL, options: [:], completionHandler: nil)
+            let vc = storyboard!.instantiateViewController(withIdentifier: "webVC") as! webVC
+            vc.navigationItem.title = "Exams"
+            vc.url = "https://mechtics.com/general/exams/"
+            vc.slide = true
+            self.vc = UINavigationController(rootViewController: vc)
+            self.slideMenuController()?.changeMainViewController(self.vc, close: true)
         }
         if indexPath.row == 5{
-            slideMenuController()?.closeLeft()
-            UIApplication.shared.open(URL(string: "https://mechtics.com/guest-post/")! as URL, options: [:], completionHandler: nil)
+            let vc = storyboard!.instantiateViewController(withIdentifier: "webVC") as! webVC
+            vc.navigationItem.title = "Guest post"
+            vc.url = "https://mechtics.com/guest-post/"
+            vc.slide = true
+            self.vc = UINavigationController(rootViewController: vc)
+            self.slideMenuController()?.changeMainViewController(self.vc, close: true)
         }
         if indexPath.row == 6{
             slideMenuController()?.closeLeft()

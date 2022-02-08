@@ -12,6 +12,7 @@ class webVC: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var webviewInstance: WKWebView!
     var url = ""
+    var slide = false
     override func viewDidLoad() {
         super.viewDidLoad()
         hudProggess(self.view, Show: true)
@@ -20,14 +21,25 @@ class webVC: UIViewController, WKNavigationDelegate {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.slideMenuController()?.leftPanGesture?.isEnabled = false
+        
         navigationController?.navigationItem.hidesBackButton = true
         let backbutton = UIButton(type: .custom)
         backbutton.frame.size.width = 40
-        backbutton.setImage(UIImage(named: "ic_back"), for: .normal)
-        backbutton.addTarget(self, action: #selector(back), for: .touchUpInside)
+        
+        if slide == false{
+            backbutton.setImage(UIImage(named: "ic_back"), for: .normal)
+            backbutton.addTarget(self, action: #selector(back), for: .touchUpInside)
+            self.slideMenuController()?.leftPanGesture?.isEnabled = false
+        }else{
+            backbutton.setImage(UIImage(named: "ic_side_menu"), for: .normal)
+            backbutton.addTarget(self, action: #selector(clickOnMenu), for: .touchUpInside)
+            self.slideMenuController()?.leftPanGesture?.isEnabled = true
+        }
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)
         
+    }
+    @objc func clickOnMenu(){
+        self.slideMenuController()?.openLeft()
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.slideMenuController()?.leftPanGesture?.isEnabled = true
