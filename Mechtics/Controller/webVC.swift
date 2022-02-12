@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 import SlideMenuControllerSwift
-class webVC: UIViewController, WKNavigationDelegate {
+class webVC: UIViewController, WKNavigationDelegate{
     
     @IBOutlet weak var webviewInstance: WKWebView!
     var url = ""
@@ -18,6 +18,8 @@ class webVC: UIViewController, WKNavigationDelegate {
         hudProggess(self.view, Show: true)
         webviewInstance.load(NSURLRequest(url: NSURL(string: url)! as URL) as URLRequest)
         webviewInstance.navigationDelegate = self
+        
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {

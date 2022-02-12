@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 class NotesVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -14,6 +15,8 @@ class NotesVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var noteArr = [Note]()
     var assNoteArr = [Note]()
     @IBOutlet weak var notesTbl: UITableView!
+    @IBOutlet weak var adsView: UIView!
+    var bannerView = GADBannerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         notesTbl.tableFooterView = UIView()
@@ -27,8 +30,18 @@ class NotesVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         sidemenu.heightAnchor.constraint(equalToConstant: 40).isActive = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sidemenu)
         navigationItem.title = "Notes"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        addBannerViewToView(bannerView)
+        bannerView.rootViewController = self
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        bannerView.load(GADRequest())
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: adsView.frame.height)
+       adsView.addSubview(bannerView)
+      }
     override func viewWillAppear(_ animated: Bool) {
         fetchData()
         notesTbl.reloadData()

@@ -7,18 +7,31 @@
 
 import UIKit
 import SlideMenuControllerSwift
-
-class SidemenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
+import GoogleMobileAds
+class SidemenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource, GADFullScreenContentDelegate{
     @IBOutlet weak var tblMenu: UITableView!
     var vc: UIViewController!
     var hvc: UIViewController!
+    private var interstitial = GADInterstitialAd()
     override func viewDidLoad() {
         super.viewDidLoad()
         tblMenu.tableFooterView = UIView()
         self.view.backgroundColor = themColor
+        
     }
     override func viewWillAppear(_ animated: Bool) {
-        
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/4411468910",
+                               request: request,
+                               completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            interstitial = ad!
+            interstitial.fullScreenContentDelegate = self
+        }
+        )
 //        UIView.appearance().backgroundColor = themColor
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -54,6 +67,11 @@ class SidemenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
             self.slideMenuController()?.changeMainViewController(self.vc, close: true)
         }
         if indexPath.row == 3{
+            if interstitial != nil {
+                interstitial.present(fromRootViewController: self)
+              } else {
+                print("Ad wasn't ready")
+              }
             let vc = storyboard!.instantiateViewController(withIdentifier: "webVC") as! webVC
             vc.navigationItem.title = "Jobs"
             vc.url = "https://mechtics.com/general/jobs/"
@@ -62,6 +80,11 @@ class SidemenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
             self.slideMenuController()?.changeMainViewController(self.vc, close: true)
         }
         if indexPath.row == 4{
+            if interstitial != nil {
+                interstitial.present(fromRootViewController: self)
+              } else {
+                print("Ad wasn't ready")
+              }
             let vc = storyboard!.instantiateViewController(withIdentifier: "webVC") as! webVC
             vc.navigationItem.title = "Exams"
             vc.url = "https://mechtics.com/general/exams/"
@@ -70,6 +93,11 @@ class SidemenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
             self.slideMenuController()?.changeMainViewController(self.vc, close: true)
         }
         if indexPath.row == 5{
+            if interstitial != nil {
+                interstitial.present(fromRootViewController: self)
+              } else {
+                print("Ad wasn't ready")
+              }
             let vc = storyboard!.instantiateViewController(withIdentifier: "webVC") as! webVC
             vc.navigationItem.title = "Guest post"
             vc.url = "https://mechtics.com/guest-post/"

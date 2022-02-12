@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import SlideMenuControllerSwift
 import IQKeyboardManagerSwift
+import GoogleMobileAds
 let themColor: UIColor = UIColor(red: 0/255, green: 84/255, blue: 166/255, alpha: 1)
 
 @main
@@ -43,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         // Override point for customization after application launch.
         return true
     }

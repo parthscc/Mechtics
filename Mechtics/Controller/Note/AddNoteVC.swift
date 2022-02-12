@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 class AddNoteVC: UIViewController,UITextViewDelegate,UITextFieldDelegate {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -18,6 +19,8 @@ class AddNoteVC: UIViewController,UITextViewDelegate,UITextFieldDelegate {
     @IBOutlet weak var notetitle: UITextField!
     @IBOutlet weak var noteTxt: UITextView!
     @IBOutlet weak var btnSave: UIButton!
+    @IBOutlet weak var adsView: UIView!
+    var bannerView = GADBannerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +29,19 @@ class AddNoteVC: UIViewController,UITextViewDelegate,UITextFieldDelegate {
         notetitle.setPlaceHolderWithColor(.darkGray)
         noteTxt.text = "Note"
         [viewForNote,btnSave,notetitle].forEach({$0?.cornerRadius = 15})
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        addBannerViewToView(bannerView)
+        bannerView.rootViewController = self
+        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        bannerView.load(GADRequest())
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: adsView.frame.height)
+        bannerView.backgroundColor = .white
+       adsView.addSubview(bannerView)
+      }
     override func viewWillAppear(_ animated: Bool) {
         self.slideMenuController()?.leftPanGesture?.isEnabled = false
         if note.title == "" && note.note == ""{

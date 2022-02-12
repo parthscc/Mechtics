@@ -6,9 +6,10 @@
 //
 
 import UIKit
-
-class BlogsTVC: UITableViewController {
-
+import GoogleMobileAds
+class BlogsTVC: UITableViewController, GADFullScreenContentDelegate {
+    var bannerView = GADBannerView()
+    private var interstitial = GADInterstitialAd()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
@@ -22,7 +23,39 @@ class BlogsTVC: UITableViewController {
         sidemenu.heightAnchor.constraint(equalToConstant: 40).isActive = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sidemenu)
         navigationItem.title = "Blogs"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        addBannerViewToView(bannerView)
+        bannerView.rootViewController = self
       
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/4411468910",
+                               request: request,
+                               completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            interstitial = ad!
+            interstitial.fullScreenContentDelegate = self
+        }
+        )
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        bannerView.load(GADRequest())
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        NSLayoutConstraint.activate([
+
+            bannerView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            bannerView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            bannerView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor,constant: -50),
+            bannerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+                    ])
+        
     }
     @objc func clickOnMenu(){
         self.slideMenuController()?.openLeft()
@@ -37,7 +70,9 @@ class BlogsTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BlogsCell", for: indexPath) as! BlogsCell
 
         cell.lbl.text = blogsArr[indexPath.row].name
-
+        if indexPath.row == blogsArr.count - 1{
+            cell.arrow.isHidden = true
+        }
         return cell
     }
 
@@ -45,10 +80,19 @@ class BlogsTVC: UITableViewController {
         return UITableView.automaticDimension
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "webVC") as! webVC
-        vc.navigationItem.title = blogsArr[indexPath.row].name
-        vc.url = blogsArr[indexPath.row].url
-        navigationController?.pushViewController(vc, animated: true)
+        if indexPath.row == blogsArr.count - 1{
+            
+        }else{
+            if interstitial != nil {
+                interstitial.present(fromRootViewController: self)
+              } else {
+                print("Ad wasn't ready")
+              }
+            let vc = storyboard?.instantiateViewController(withIdentifier: "webVC") as! webVC
+            vc.navigationItem.title = blogsArr[indexPath.row].name
+            vc.url = blogsArr[indexPath.row].url
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
 }

@@ -8,6 +8,7 @@ pod 'SlideMenuControllerSwift'
 pod 'MBProgressHUD'
 pod 'IQKeyboardManagerSwift'
 pod 'SwiftMessages'
+pod 'Google-Mobile-Ads-SDK'
   # Pods for Mechtics
 
 end

@@ -7,10 +7,13 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import GoogleMobileAds
 class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
+    @IBOutlet weak var adsView: UIView!
     @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var blogTbl: UITableView!
+    var bannerView = GADBannerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +27,21 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         sidemenu.heightAnchor.constraint(equalToConstant: 40).isActive = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sidemenu)
         navigationItem.title = "Home"
+        
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        addBannerViewToView(bannerView)
+        bannerView.rootViewController = self
+        
+        
+        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        bannerView.load(GADRequest())
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: adsView.frame.height)
+       adsView.addSubview(bannerView)
+      }
     override func viewWillAppear(_ animated: Bool) {
 //        UIView.appearance().backgroundColor = .white
     }
