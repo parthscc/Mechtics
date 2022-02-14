@@ -29,7 +29,7 @@ class AddNoteVC: UIViewController,UITextViewDelegate,UITextFieldDelegate {
         notetitle.setPlaceHolderWithColor(.darkGray)
         noteTxt.text = "Note"
         [viewForNote,btnSave,notetitle].forEach({$0?.cornerRadius = 15})
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = bannerID
         addBannerViewToView(bannerView)
         bannerView.rootViewController = self
         

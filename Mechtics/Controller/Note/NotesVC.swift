@@ -30,7 +30,7 @@ class NotesVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         sidemenu.heightAnchor.constraint(equalToConstant: 40).isActive = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sidemenu)
         navigationItem.title = "Notes"
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = bannerID
         addBannerViewToView(bannerView)
         bannerView.rootViewController = self
         

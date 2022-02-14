@@ -28,7 +28,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sidemenu)
         navigationItem.title = "Home"
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = bannerID
         addBannerViewToView(bannerView)
         bannerView.rootViewController = self
         

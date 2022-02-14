@@ -11,13 +11,19 @@ import SlideMenuControllerSwift
 import IQKeyboardManagerSwift
 import GoogleMobileAds
 let themColor: UIColor = UIColor(red: 0/255, green: 84/255, blue: 166/255, alpha: 1)
+let bannerID = "ca-app-pub-8516728236071453/2682993766"
+let interstialID = "ca-app-pub-8516728236071453/1585356901"
 
+//let bannerID = "ca-app-pub-3940256099942544/2934735716"
+//let interstialID = "ca-app-pub-3940256099942544/4411468910"
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "393da0ed63b1254845d70104e222c7f7" ]
         
         IQKeyboardManager.shared.enable = true
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -29,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
+        
+        
         
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()

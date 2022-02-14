@@ -23,14 +23,14 @@ class BlogsTVC: UITableViewController, GADFullScreenContentDelegate {
         sidemenu.heightAnchor.constraint(equalToConstant: 40).isActive = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sidemenu)
         navigationItem.title = "Blogs"
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = bannerID
         addBannerViewToView(bannerView)
         bannerView.rootViewController = self
       
     }
     override func viewWillAppear(_ animated: Bool) {
         let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/4411468910",
+        GADInterstitialAd.load(withAdUnitID:interstialID,
                                request: request,
                                completionHandler: { [self] ad, error in
             if let error = error {
